@@ -5,10 +5,11 @@ const Time = (props) => {
     const bg = { backgroundColor: props.corSecundaria }
 
     return (
-        <section className='time' style={ bg }>
+        (props.colaboradores.length > 0) ? <section className='time' style={ bg }>
             <h3 style={{ borderColor: props.corPrimaria }}>{props.nome}</h3>
-            <Colaborador />
+            <div className='colaboradores'>{props.colaboradores.map( colaborador => <Colaborador nome={colaborador.nome} cargo={colaborador.cargo} imagem={colaborador.imagem}/> )}</div>
         </section>
+        : ''
     )
 }
 
