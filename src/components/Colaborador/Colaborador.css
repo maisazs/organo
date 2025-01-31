@@ -1,5 +1,7 @@
 .colaborador {
     width: 280px;
+    transition: all;
+    transition-duration: 0.3s;
 }
 
 .colaborador .cabecalho {
@@ -42,4 +44,8 @@
     justify-content: space-around;
     margin-top: 32px;
     flex-wrap: wrap;
+}
+
+.colaborador:hover {
+    scale: 1.015;
 }
